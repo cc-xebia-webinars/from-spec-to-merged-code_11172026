@@ -1,0 +1,22 @@
+name: Copilot Setup Steps
+
+# When the Copilot cloud agent works in the GitHub Actions environment, it runs this job first, so
+# uv, Python 3.14, and the project's dependencies are ready before it starts. The job has to be
+# called copilot-setup-steps. Running it on a push that changes this file checks that it works.
+on:
+  workflow_dispatch:
+  push:
+    paths: [.github/workflows/copilot-setup-steps.yml]
+  pull_request:
+    paths: [.github/workflows/copilot-setup-steps.yml]
+
+jobs:
+  copilot-setup-steps:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10.3.3
+      - name: Install Python and the dependencies
+        run: uv sync --locked

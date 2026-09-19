@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:db="https://cloudcontraptions.com/ns/diagram-builder/1" width="1008pt" height="612pt" viewBox="0 0 1008 612" db:version="1">
+<metadata>
+<db:model version="1" generator="diagram-builder 0.1.0" body-hash="91f1a480df173baf"><![CDATA[
+{
+  "version": 1,
+  "title": "From spec to merge",
+  "page": {
+    "width": 1008.0,
+    "height": 612.0,
+    "margin": 36.0,
+    "background": "#ffffff"
+  },
+  "elements": [
+    {
+      "type": "shape",
+      "id": "spec",
+      "kind": "rect",
+      "x": 40.0,
+      "y": 210.0,
+      "w": 112.0,
+      "h": 64.0,
+      "text": "Spec",
+      "style": {
+        "fill": "#fce6da",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": 8.0,
+        "font": null,
+        "font_size": 17.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "tests",
+      "kind": "rect",
+      "x": 176.0,
+      "y": 210.0,
+      "w": 112.0,
+      "h": 64.0,
+      "text": "Failing tests",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": 8.0,
+        "font": null,
+        "font_size": 17.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "plan",
+      "kind": "rect",
+      "x": 312.0,
+      "y": 210.0,
+      "w": 112.0,
+      "h": 64.0,
+      "text": "Plan",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": 8.0,
+        "font": null,
+        "font_size": 17.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "build",
+      "kind": "rect",
+      "x": 448.0,
+      "y": 210.0,
+      "w": 112.0,
+      "h": 64.0,
+      "text": "Build",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": 8.0,
+        "font": null,
+        "font_size": 17.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "verify",
+      "kind": "rect",
+      "x": 584.0,
+      "y": 210.0,
+      "w": 112.0,
+      "h": 64.0,
+      "text": "Verify",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": 8.0,
+        "font": null,
+        "font_size": 17.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "review",
+      "kind": "rect",
+      "x": 720.0,
+      "y": 210.0,
+      "w": 112.0,
+      "h": 64.0,
+      "text": "Review",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": 8.0,
+        "font": null,
+        "font_size": 17.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "merge",
+      "kind": "rect",
+      "x": 856.0,
+      "y": 210.0,
+      "w": 112.0,
+      "h": 64.0,
+      "text": "Merge",
+      "style": {
+        "fill": "#fce6da",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": 8.0,
+        "font": null,
+        "font_size": 17.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn1",
+      "from": "spec",
+      "to": "tests",
+      "route": "straight"
+    },
+    {
+      "type": "connector",
+      "id": "conn2",
+      "from": "tests",
+      "to": "plan",
+      "route": "straight"
+    },
+    {
+      "type": "connector",
+      "id": "conn3",
+      "from": "plan",
+      "to": "build",
+      "route": "straight"
+    },
+    {
+      "type": "connector",
+      "id": "conn4",
+      "from": "build",
+      "to": "verify",
+      "route": "straight"
+    },
+    {
+      "type": "connector",
+      "id": "conn5",
+      "from": "verify",
+      "to": "review",
+      "route": "straight"
+    },
+    {
+      "type": "connector",
+      "id": "conn6",
+      "from": "review",
+      "to": "merge",
+      "route": "straight"
+    },
+    {
+      "type": "label",
+      "id": "l_spec",
+      "x": 40.0,
+      "y": 288.0,
+      "text": "You write\nthe criteria",
+      "w": 112.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": "center",
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "l_tests",
+      "x": 176.0,
+      "y": 288.0,
+      "text": "spec-to-tests\nskill",
+      "w": 112.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": "center",
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "l_plan",
+      "x": 312.0,
+      "y": 288.0,
+      "text": "Plan mode,\nin slices",
+      "w": 112.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": "center",
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "l_build",
+      "x": 448.0,
+      "y": 288.0,
+      "text": "Agent team,\n/goal loop,\ncloud agent",
+      "w": 112.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": "center",
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "l_verify",
+      "x": 584.0,
+      "y": 288.0,
+      "text": "A verifier\nwith no stake",
+      "w": 112.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": "center",
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "l_review",
+      "x": 720.0,
+      "y": 288.0,
+      "text": "Copilot review,\nfix PRs, CI",
+      "w": 112.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": "center",
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "l_merge",
+      "x": 856.0,
+      "y": 288.0,
+      "text": "You decide",
+      "w": 112.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": "center",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "ground",
+      "kind": "rect",
+      "x": 40.0,
+      "y": 372.0,
+      "w": 928.0,
+      "h": 48.0,
+      "text": "Ground truth for every agent:  AGENTS.md  ·  skills  ·  roombook-facts MCP server  ·  hooks",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": 8.0,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "loop",
+      "from": "verify",
+      "to": "build",
+      "from_side": "top",
+      "to_side": "top",
+      "label": "findings",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": "dashed",
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    }
+  ],
+  "next_id": {
+    "conn": 6
+  }
+}
+]]></db:model>
+</metadata>
+<!-- GENERATED BY diagram-builder. The <metadata> block above is the source of truth.
+       Edits made below this line are DISCARDED on the next diagram-builder command. -->
+<g id="db-body">
+<rect x="0" y="0" width="1008" height="612" fill="#ffffff"/>
+<g id="conn1"><path d="M152 242L167 242" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M176 242L166 246L166 238Z" fill="#6b6a66"/></g>
+<g id="conn2"><path d="M288 242L303 242" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M312 242L302 246L302 238Z" fill="#6b6a66"/></g>
+<g id="conn3"><path d="M424 242L439 242" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M448 242L438 246L438 238Z" fill="#6b6a66"/></g>
+<g id="conn4"><path d="M560 242L575 242" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M584 242L574 246L574 238Z" fill="#6b6a66"/></g>
+<g id="conn5"><path d="M696 242L711 242" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M720 242L710 246L710 238Z" fill="#6b6a66"/></g>
+<g id="conn6"><path d="M832 242L847 242" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M856 242L846 246L846 238Z" fill="#6b6a66"/></g>
+<g id="loop"><path d="M640 210L640 194L504 194L504 201" fill="none" stroke="#6b6a66" stroke-width="1.5" stroke-dasharray="6 3.75" stroke-linecap="round"/><path d="M504 210L500 200L508 200Z" fill="#6b6a66"/><rect x="548.66" y="183.75" width="55.67" height="20.5" rx="2" fill="#ffffff"/><text x="576.5" y="199.25" font-family="IBM Plex Sans" font-size="14" fill="#1a1a1a" text-anchor="middle"><tspan x="576.5" dy="0">findings</tspan></text></g>
+<g id="spec"><path d="M48 210H144A8 8 0 0 1 152 218V266A8 8 0 0 1 144 274H48A8 8 0 0 1 40 266V218A8 8 0 0 1 48 210Z" fill="#fce6da" stroke="#d9541f" stroke-width="1.5"/><text x="96" y="248.38" font-family="IBM Plex Sans" font-size="17" font-weight="700" fill="#7a2f0f" text-anchor="middle"><tspan x="96" dy="0">Spec</tspan></text></g>
+<g id="tests"><path d="M184 210H280A8 8 0 0 1 288 218V266A8 8 0 0 1 280 274H184A8 8 0 0 1 176 266V218A8 8 0 0 1 184 210Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="232" y="237.75" font-family="IBM Plex Sans" font-size="17" font-weight="700" fill="#10386b" text-anchor="middle"><tspan x="232" dy="0">Failing</tspan><tspan x="232" dy="21.25">tests</tspan></text></g>
+<g id="plan"><path d="M320 210H416A8 8 0 0 1 424 218V266A8 8 0 0 1 416 274H320A8 8 0 0 1 312 266V218A8 8 0 0 1 320 210Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="368" y="248.38" font-family="IBM Plex Sans" font-size="17" font-weight="700" fill="#10386b" text-anchor="middle"><tspan x="368" dy="0">Plan</tspan></text></g>
+<g id="build"><path d="M456 210H552A8 8 0 0 1 560 218V266A8 8 0 0 1 552 274H456A8 8 0 0 1 448 266V218A8 8 0 0 1 456 210Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="504" y="248.38" font-family="IBM Plex Sans" font-size="17" font-weight="700" fill="#10386b" text-anchor="middle"><tspan x="504" dy="0">Build</tspan></text></g>
+<g id="verify"><path d="M592 210H688A8 8 0 0 1 696 218V266A8 8 0 0 1 688 274H592A8 8 0 0 1 584 266V218A8 8 0 0 1 592 210Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="640" y="248.38" font-family="IBM Plex Sans" font-size="17" font-weight="700" fill="#10386b" text-anchor="middle"><tspan x="640" dy="0">Verify</tspan></text></g>
+<g id="review"><path d="M728 210H824A8 8 0 0 1 832 218V266A8 8 0 0 1 824 274H728A8 8 0 0 1 720 266V218A8 8 0 0 1 728 210Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="776" y="248.38" font-family="IBM Plex Sans" font-size="17" font-weight="700" fill="#10386b" text-anchor="middle"><tspan x="776" dy="0">Review</tspan></text></g>
+<g id="merge"><path d="M864 210H960A8 8 0 0 1 968 218V266A8 8 0 0 1 960 274H864A8 8 0 0 1 856 266V218A8 8 0 0 1 864 210Z" fill="#fce6da" stroke="#d9541f" stroke-width="1.5"/><text x="912" y="248.38" font-family="IBM Plex Sans" font-size="17" font-weight="700" fill="#7a2f0f" text-anchor="middle"><tspan x="912" dy="0">Merge</tspan></text></g>
+<g id="l_spec"><text x="96" y="302" font-family="IBM Plex Sans" font-size="14" fill="#6b6a66" text-anchor="middle"><tspan x="96" dy="0">You write</tspan><tspan x="96" dy="17.5">the criteria</tspan></text></g>
+<g id="l_tests"><text x="232" y="302" font-family="IBM Plex Sans" font-size="14" fill="#6b6a66" text-anchor="middle"><tspan x="232" dy="0">spec-to-tests</tspan><tspan x="232" dy="17.5">skill</tspan></text></g>
+<g id="l_plan"><text x="368" y="302" font-family="IBM Plex Sans" font-size="14" fill="#6b6a66" text-anchor="middle"><tspan x="368" dy="0">Plan mode,</tspan><tspan x="368" dy="17.5">in slices</tspan></text></g>
+<g id="l_build"><text x="504" y="302" font-family="IBM Plex Sans" font-size="14" fill="#6b6a66" text-anchor="middle"><tspan x="504" dy="0">Agent team,</tspan><tspan x="504" dy="17.5">/goal loop,</tspan><tspan x="504" dy="17.5">cloud agent</tspan></text></g>
+<g id="l_verify"><text x="640" y="302" font-family="IBM Plex Sans" font-size="14" fill="#6b6a66" text-anchor="middle"><tspan x="640" dy="0">A verifier</tspan><tspan x="640" dy="17.5">with no stake</tspan></text></g>
+<g id="l_review"><text x="776" y="302" font-family="IBM Plex Sans" font-size="14" fill="#6b6a66" text-anchor="middle"><tspan x="776" dy="0">Copilot review,</tspan><tspan x="776" dy="17.5">fix PRs, CI</tspan></text></g>
+<g id="l_merge"><text x="912" y="302" font-family="IBM Plex Sans" font-size="14" fill="#6b6a66" text-anchor="middle"><tspan x="912" dy="0">You decide</tspan></text></g>
+<g id="ground"><path d="M48 372H960A8 8 0 0 1 968 380V412A8 8 0 0 1 960 420H48A8 8 0 0 1 40 412V380A8 8 0 0 1 48 372Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="504" y="402" font-family="IBM Plex Sans" font-size="16" fill="#0a4d36" text-anchor="middle"><tspan x="504" dy="0">Ground truth for every agent:  AGENTS.md  ·  skills  ·  roombook-facts MCP server  ·  hooks</tspan></text></g>
+</g>
+</svg>

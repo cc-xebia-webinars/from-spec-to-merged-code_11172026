@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "roombook-facts": {
+      "type": "stdio",
+      "command": "uv",
+      "args": ["run", "python", "-m", "facts"]
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "claudeMdExcludes": [
+    "**/!(0[1-4]-*)/CLAUDE.md",
+    "**/!(0[1-4]-*)/AGENTS.md"
+  ],
+  "permissions": {
+    "defaultMode": "default",
+    "allow": [
+      "Bash(uv run pytest *)",
+      "PowerShell(uv run pytest *)",
+      "Bash(uv run ruff *)",
+      "PowerShell(uv run ruff *)",
+      "mcp__roombook-facts"
+    ],
+    "deny": [
+      "Read(./README.md)",
+      "Bash(git push *)",
+      "PowerShell(git push *)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "uv run --project \"${CLAUDE_PROJECT_DIR}\" python \"${CLAUDE_PROJECT_DIR}/.claude/hooks/protect_tests.py\""
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "uv run --project \"${CLAUDE_PROJECT_DIR}\" ruff format --quiet \"${CLAUDE_PROJECT_DIR}\""
+          }
+        ]
+      }
+    ]
+  }
+}

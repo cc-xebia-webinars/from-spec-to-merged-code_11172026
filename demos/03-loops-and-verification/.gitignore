@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.coverage
+
+# The sample database is built the first time the app or the facts server starts.
+data/
+*.db
+
+# Claude Code saves "don't ask again" approvals here. They're personal, so they stay out of git.
+.claude/settings.local.json
+
+# Each person's own record of what their agents cost.
+.claude/cost-ledger.jsonl

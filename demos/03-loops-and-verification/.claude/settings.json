@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "claudeMdExcludes": [
+    "**/!(0[1-4]-*)/CLAUDE.md",
+    "**/!(0[1-4]-*)/AGENTS.md"
+  ],
+  "permissions": {
+    "defaultMode": "default",
+    "allow": [
+      "Bash(uv run pytest *)",
+      "PowerShell(uv run pytest *)",
+      "Bash(uv run ruff *)",
+      "PowerShell(uv run ruff *)",
+      "Bash(git status *)",
+      "PowerShell(git status *)",
+      "Bash(git diff *)",
+      "PowerShell(git diff *)",
+      "Bash(git log *)",
+      "PowerShell(git log *)",
+      "mcp__roombook-facts"
+    ],
+    "deny": [
+      "Read(./README.md)",
+      "Bash(git push *)",
+      "PowerShell(git push *)"
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "uv run python .claude/statusline.py"
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "uv run --project \"${CLAUDE_PROJECT_DIR}\" python \"${CLAUDE_PROJECT_DIR}/.claude/hooks/protect_tests.py\""
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "uv run --project \"${CLAUDE_PROJECT_DIR}\" ruff format --quiet \"${CLAUDE_PROJECT_DIR}\""
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "uv run --project \"${CLAUDE_PROJECT_DIR}\" python \"${CLAUDE_PROJECT_DIR}/.claude/hooks/cost_ledger.py\""
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "uv run --project \"${CLAUDE_PROJECT_DIR}\" python \"${CLAUDE_PROJECT_DIR}/.claude/hooks/cost_ledger.py\""
+          }
+        ]
+      }
+    ]
+  }
+}

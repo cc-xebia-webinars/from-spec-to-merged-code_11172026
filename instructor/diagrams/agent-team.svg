@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:db="https://cloudcontraptions.com/ns/diagram-builder/1" width="1008pt" height="612pt" viewBox="0 0 1008 612" db:version="1">
+<metadata>
+<db:model version="1" generator="diagram-builder 0.1.0" body-hash="8aaeb07fa3fe2f61"><![CDATA[
+{
+  "version": 1,
+  "title": "Coordinator, implementor, verifier",
+  "page": {
+    "width": 1008.0,
+    "height": 612.0,
+    "margin": 36.0,
+    "background": "#ffffff"
+  },
+  "elements": [
+    {
+      "type": "shape",
+      "id": "coord",
+      "kind": "rect",
+      "x": 384.0,
+      "y": 120.0,
+      "w": 240.0,
+      "h": 80.0,
+      "text": "coordinator\nOpus · no edit tools\nsplits, briefs, decides",
+      "style": {
+        "fill": "#e6e4f6",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": 8.0,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#2a2160",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "implA",
+      "kind": "rect",
+      "x": 118.0,
+      "y": 270.0,
+      "w": 170.0,
+      "h": 64.0,
+      "text": "implementor\nslice A",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": 8.0,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "implB",
+      "kind": "rect",
+      "x": 314.0,
+      "y": 270.0,
+      "w": 170.0,
+      "h": 64.0,
+      "text": "implementor\nslice B",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": 8.0,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "implC",
+      "kind": "rect",
+      "x": 510.0,
+      "y": 270.0,
+      "w": 170.0,
+      "h": 64.0,
+      "text": "implementor\nslice C",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": 8.0,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "verif",
+      "kind": "rect",
+      "x": 706.0,
+      "y": 270.0,
+      "w": 170.0,
+      "h": 64.0,
+      "text": "verifier\nOpus · read-only",
+      "style": {
+        "fill": "#fce6da",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": 8.0,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn1",
+      "from": "coord",
+      "to": "implA",
+      "from_side": "bottom",
+      "to_side": "top"
+    },
+    {
+      "type": "connector",
+      "id": "conn2",
+      "from": "coord",
+      "to": "implB",
+      "from_side": "bottom",
+      "to_side": "top"
+    },
+    {
+      "type": "connector",
+      "id": "conn3",
+      "from": "coord",
+      "to": "implC",
+      "from_side": "bottom",
+      "to_side": "top"
+    },
+    {
+      "type": "connector",
+      "id": "conn4",
+      "from": "coord",
+      "to": "verif",
+      "from_side": "bottom",
+      "to_side": "top"
+    },
+    {
+      "type": "label",
+      "id": "par",
+      "x": 118.0,
+      "y": 344.0,
+      "text": "in parallel  ·  Sonnet  ·  edits accepted, tests protected",
+      "w": 366.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": "center",
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "after",
+      "x": 510.0,
+      "y": 344.0,
+      "text": "after A and B",
+      "w": 170.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": "center",
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "last",
+      "x": 706.0,
+      "y": 344.0,
+      "text": "checks against the spec",
+      "w": 170.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": "center",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "shared",
+      "kind": "rect",
+      "x": 118.0,
+      "y": 400.0,
+      "w": 758.0,
+      "h": 48.0,
+      "text": "Every agent:  roombook-facts MCP (read-only)  ·  hooks  ·  cost ledger, one line per agent",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": 8.0,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    }
+  ],
+  "next_id": {
+    "conn": 4
+  }
+}
+]]></db:model>
+</metadata>
+<!-- GENERATED BY diagram-builder. The <metadata> block above is the source of truth.
+       Edits made below this line are DISCARDED on the next diagram-builder command. -->
+<g id="db-body">
+<rect x="0" y="0" width="1008" height="612" fill="#ffffff"/>
+<g id="conn1"><path d="M504 200L504 235L203 235L203 261" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M203 270L199 260L207 260Z" fill="#6b6a66"/></g>
+<g id="conn2"><path d="M504 200L504 235L399 235L399 261" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M399 270L395 260L403 260Z" fill="#6b6a66"/></g>
+<g id="conn3"><path d="M504 200L504 235L595 235L595 261" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M595 270L591 260L599 260Z" fill="#6b6a66"/></g>
+<g id="conn4"><path d="M504 200L504 235L791 235L791 261" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M791 270L787 260L795 260Z" fill="#6b6a66"/></g>
+<g id="coord"><path d="M392 120H616A8 8 0 0 1 624 128V192A8 8 0 0 1 616 200H392A8 8 0 0 1 384 192V128A8 8 0 0 1 392 120Z" fill="#e6e4f6" stroke="#4a3aa7" stroke-width="1.5"/><text x="504" y="146" font-family="IBM Plex Sans" font-size="16" fill="#2a2160" text-anchor="middle"><tspan x="504" dy="0">coordinator</tspan><tspan x="504" dy="20">Opus · no edit tools</tspan><tspan x="504" dy="20">splits, briefs, decides</tspan></text></g>
+<g id="implA"><path d="M126 270H280A8 8 0 0 1 288 278V326A8 8 0 0 1 280 334H126A8 8 0 0 1 118 326V278A8 8 0 0 1 126 270Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="203" y="298" font-family="IBM Plex Sans" font-size="16" fill="#10386b" text-anchor="middle"><tspan x="203" dy="0">implementor</tspan><tspan x="203" dy="20">slice A</tspan></text></g>
+<g id="implB"><path d="M322 270H476A8 8 0 0 1 484 278V326A8 8 0 0 1 476 334H322A8 8 0 0 1 314 326V278A8 8 0 0 1 322 270Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="399" y="298" font-family="IBM Plex Sans" font-size="16" fill="#10386b" text-anchor="middle"><tspan x="399" dy="0">implementor</tspan><tspan x="399" dy="20">slice B</tspan></text></g>
+<g id="implC"><path d="M518 270H672A8 8 0 0 1 680 278V326A8 8 0 0 1 672 334H518A8 8 0 0 1 510 326V278A8 8 0 0 1 518 270Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="595" y="298" font-family="IBM Plex Sans" font-size="16" fill="#10386b" text-anchor="middle"><tspan x="595" dy="0">implementor</tspan><tspan x="595" dy="20">slice C</tspan></text></g>
+<g id="verif"><path d="M714 270H868A8 8 0 0 1 876 278V326A8 8 0 0 1 868 334H714A8 8 0 0 1 706 326V278A8 8 0 0 1 714 270Z" fill="#fce6da" stroke="#d9541f" stroke-width="1.5"/><text x="791" y="298" font-family="IBM Plex Sans" font-size="16" fill="#7a2f0f" text-anchor="middle"><tspan x="791" dy="0">verifier</tspan><tspan x="791" dy="20">Opus · read-only</tspan></text></g>
+<g id="par"><text x="301" y="358" font-family="IBM Plex Sans" font-size="14" fill="#6b6a66" text-anchor="middle"><tspan x="301" dy="0">in parallel  ·  Sonnet  ·  edits accepted, tests protected</tspan></text></g>
+<g id="after"><text x="595" y="358" font-family="IBM Plex Sans" font-size="14" fill="#6b6a66" text-anchor="middle"><tspan x="595" dy="0">after A and B</tspan></text></g>
+<g id="last"><text x="791" y="358" font-family="IBM Plex Sans" font-size="14" fill="#6b6a66" text-anchor="middle"><tspan x="791" dy="0">checks against the spec</tspan></text></g>
+<g id="shared"><path d="M126 400H868A8 8 0 0 1 876 408V440A8 8 0 0 1 868 448H126A8 8 0 0 1 118 440V408A8 8 0 0 1 126 400Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="497" y="430" font-family="IBM Plex Sans" font-size="16" fill="#0a4d36" text-anchor="middle"><tspan x="497" dy="0">Every agent:  roombook-facts MCP (read-only)  ·  hooks  ·  cost ledger, one line per agent</tspan></text></g>
+</g>
+</svg>

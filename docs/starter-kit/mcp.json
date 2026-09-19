@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "<facts-server>": {
+      "type": "stdio",
+      "command": "uv",
+      "args": ["run", "python", "-m", "<facts package>"]
+    }
+  }
+}
